@@ -17,6 +17,7 @@ h2 {
 }
 ul, ol {
     margin-top: 2px;
+    
 }
 .contenedor {
     display: flex;
@@ -32,11 +33,10 @@ p {
     text-align: justify;
 }
 .Linea-azul {
-    position: absolute;
+    position: fixed;
     top: 0%;
     width: 20%;
-    height: auto;
-    min-height: 100%;
+    height: 100vh;
     background-color: blue;
     left: 0;
     display: flex;
@@ -46,26 +46,26 @@ p {
     box-sizing: border-box;
 }
 .lista {
-    color: white;
+    color: black;
     font-size: 18px;
 }
 .contenido {
     width: 60%;
-    height: auto;
+    height: 100vh;
     position: absolute;
     left: 20%;
     padding: 20px;
     box-sizing: border-box;
 }
 .Linea-azul h2 {
-    color: white;
+    color: black;
 }
 .divisor {
     border-top: 2px solid white;
 
 }
 .Linea-celeste {
-    position: absolute;
+    position: fixed;
     top: 0%;
     width: 20%;
     height: 100vh;
