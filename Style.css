@@ -1,0 +1,66 @@
+h1 {
+    text-align: center;
+}
+img {
+    width: 200px;
+    height: auto;
+}
+body {
+    background-color: beige;
+}
+h2 {
+    text-decoration: underline;
+    margin-bottom: 2px;
+}
+ul, ol {
+    margin-top: 2px;
+}
+.contenedor {
+    display: flex;
+    align-items: center;
+}
+.logo-RockTruck {
+    width: 200px;
+    height: auto;
+    margin-right: 30px;
+}
+p {
+    margin: 0;
+    text-align: justify;
+}
+.Linea-azul {
+    width: 20%;
+    height: 100vh;
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.lista {
+    color: white;
+    font-size: 18px;
+}
+.contenido {
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    left: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.Linea-azul h2 {
+    color: white;
+}
+.divisor {
+    border-top: 2px solid white;
+
+}
+.Linea-celeste {
+    width: 20%;
+    height: 100vh;
+    left: 60%;
+}
