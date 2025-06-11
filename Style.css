@@ -1,21 +1,21 @@
 h1 {
-    text-align: center;
+    text-align: center;/*Este comando centra el texto en la pantalla*/
 }
-img {
+img {/*este comando es para ajustar la dimension de la imagen*/
     width: 200px;
     height: auto;
 }
-body {
+body {/*este comando se utiliza para controlar el diseno del cuerpo de la pagina*/
     background-color: whitesmoke;
     height: 100%;
     margin: 0;
     padding: 0;
 }
-h2 {
+h2 {/*Con este comando se determina el diseño de los textos dentro del <h2>*/
     text-decoration: underline;
     margin-bottom: 2px;
 }
-ul, ol {
+ul, ol {/*Con este se controla el margen de las listas*/
     margin-top: 2px;
     
 }
@@ -23,7 +23,7 @@ ul, ol {
     display: flex;
     align-items: center;
 }
-.logo-RockTruck {
+.logo-RockTruck {/*determina el tamano de la imagen "Logo RockTruck"*/
     width: 200px;
     height: auto;
     margin-right: 30px;
@@ -32,7 +32,7 @@ p {
     margin: 0;
     text-align: justify;
 }
-.Linea-azul {
+.Linea-azul {/*Este comando es para diseñar la linea de color azul que se encuentra en la parte izquierda de la pantalla*/
     position: fixed;
     top: 0%;
     width: 20%;
@@ -45,7 +45,7 @@ p {
     padding: 30px;
     box-sizing: border-box;
 }
-.lista {
+.lista {/*Se utiliza para determinar el color de texto en la lista*/
     color: black;
     font-size: 18px;
 }
@@ -57,14 +57,14 @@ p {
     padding: 20px;
     box-sizing: border-box;
 }
-.Linea-azul h2 {
+.Linea-azul h2 {/*Se utiliza para determinar el color del texto contenido en <h2> dentro de la linea azul*/
     color: black;
 }
-.divisor {
+.divisor {/*Es la linea que divide en la linea azul, se puede agregar color y grosor*/
     border-top: 2px solid white;
 
 }
-.Linea-celeste {
+.Linea-celeste {/*Esta es la linea que se encuentra a la derecha, se utiliza para su diseño*/
     position: fixed;
     top: 0%;
     width: 20%;
