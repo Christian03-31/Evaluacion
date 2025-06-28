@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
             respuesta.textContent = "";
         } else {
             alert(`Gracias por enviar su correo: "${mensaje}"`);
-            respuesta.textContent = "";
         }
     });
 });
