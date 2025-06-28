@@ -1,6 +1,7 @@
 <head>
     <title>CURRICULUM</title><!--Nombre de la pagina-->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="Linea-azul"><!--Linea que se encuentra en la parte izquierda de la pagina-->
@@ -53,7 +54,16 @@
         </div>
         <h2>Herramientas</h2>
         Excel: Intermedio<br>Python: Basico<br>Ingles: Intermedio
-        <p>Nuevo para evaluacion 2</p>
+        <p>Nuevo para evaluacion 2</p>     
+        <h2>Formulario de contacto</h2>
+        <form id="formulario">
+            <label for="mensaje">Escriba su correo electronico:</label><br>
+            <input type="email" id="mensaje" name="mensaje">
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p id="respuesta"></p>
+
     </div>
     <div class="Linea-celeste"><!--Genera una lista en la parte derecha de la pagina-->
         <div class="Logo-Contenido"></div><!--comando para contrlar la disposicion de las imagenes-->
