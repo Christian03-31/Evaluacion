@@ -1,7 +1,7 @@
 <head>
     <title>CURRICULUM</title><!--Nombre de la pagina-->
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="Linea-azul"><!--Linea que se encuentra en la parte izquierda de la pagina-->
@@ -22,8 +22,7 @@
             <li><strong>Responsabilidad</strong></li>
         </ol>
     </div>
-    <h1>CHRISTIAN DÍAZ</h1><!--Nombre en grande-->
-    <button id="boton-color">Cambiar fondo</button>
+    <h1 id="boton-color" style="cursor: pointer;">CHRISTIAN DÍAZ</h1>
     <div class="Contenido"><!--comando para determinar como estara el contenido-->
         <h2>Resumen profesional</h2>
         <!--Texto en parrafo, se agrega el comando <br> para hacer saltos de linea -->
@@ -55,6 +54,14 @@
         </div>
         <h2>Herramientas</h2>
         Excel: Intermedio<br>Python: Basico<br>Ingles: Intermedio
+        <h2>Agregar Habilidades Técnicas</h2>
+        <form id="formHabilidad">
+            <input type="text" id="nombreHabilidad" placeholder="Nombre de la habilidad" required>
+            <input type="text" id="nivelHabilidad" placeholder="Nivel (Básico, Intermedio, Avanzado)" required>
+            <button type="submit">Agregar</button>
+        </form>
+        <div id="listaHabilidades"></div>
+
         <p>Nuevo para evaluacion 2</p>     
         <h2>Formulario de contacto</h2>
         <form id="formulario">
