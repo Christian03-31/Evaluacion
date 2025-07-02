@@ -2,33 +2,60 @@ console.log("Script cargado correctamente")
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const formulario = document.getElementById("formulario");
-    const campoMensaje = document.getElementById("mensaje");
-    const respuesta = document.getElementById("respuesta");
+  const formulario = document.getElementById("formulario");
+  const campoMensaje = document.getElementById("mensaje");
+  const respuesta = document.getElementById("respuesta");
+  const iconos = document.getElementById("iconos");
 
-    formulario.addEventListener("submit", function (event) {
-        event.preventDefault();
+  formulario.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        const mensaje = campoMensaje.value.trim();
-        const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mensaje);
-        const iconos = document.getElementById("iconos");
-        if (mensaje === "") {
-            alert("Por favor, escribe un correo electrónico. 😠👎");
-            respuesta.textContent = "";
-            iconos.textContent = "😠👎"
-        } else if (!correoValido) {
-            alert("El formato del correo electrónico no es válido. 😢");
-            respuesta.textContent = "";
-            iconos.textContent = "😢"
-        } else {
-            alert(`Gracias por enviar su correo: "${mensaje}"`);
-            respuesta.textContent = `Correo recibido: ${mensaje} 😊👍`;
-            iconos.textContent = "😊👍";
-            campoMensaje.value = "";
+    const mensaje = campoMensaje.value.trim();
+    const resultado = validarCorreo(mensaje);
 
-        }
-    });
+    mostrarResultado(resultado, mensaje);
+    if (resultado === "valido") {
+      campoMensaje.value = "";
+    }
+  });
+
+  /**
+   * Valida si el correo es válido, vacío o incorrecto.
+   * @param {string} correo
+   * @returns {"vacio" | "invalido" | "valido"}
+   */
+  function validarCorreo(correo) {
+    if (correo === "") return "vacio";
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(correo) ? "valido" : "invalido";
+  }
+
+  /**
+   * Muestra el mensaje e ícono correspondiente según el resultado.
+   * @param {"vacio" | "invalido" | "valido"} estado
+   * @param {string} correo
+   */
+  function mostrarResultado(estado, correo) {
+    switch (estado) {
+      case "vacio":
+        alert("Por favor, escribe un correo electrónico. 😠👎");
+        respuesta.textContent = "";
+        iconos.textContent = "😠👎";
+        break;
+      case "invalido":
+        alert("El formato del correo electrónico no es válido. 😢");
+        respuesta.textContent = "";
+        iconos.textContent = "😢";
+        break;
+      case "valido":
+        alert(`Gracias por enviar su correo: "${correo}"`);
+        respuesta.textContent = `Correo recibido: ${correo} 😊👍`;
+        iconos.textContent = "🎉😄🎊";
+        break;
+    }
+  }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let indiceColor = 0;
@@ -47,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Funcionalidad para agregar habilidades técnicas
+
 document.addEventListener("DOMContentLoaded", function () {
     const habilidades = [];
     const formHabilidad = document.getElementById("formHabilidad");
