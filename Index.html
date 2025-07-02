@@ -6,7 +6,7 @@
 <body>
     <div class="Linea-azul"><!--Linea que se encuentra en la parte izquierda de la pagina-->
         <!--Foto de Perfil para el curriculum-->
-        <img src="Imagenes/Perfil.jpeg" alt="Foto_de_perfil" class="Foto_de_perfil">
+        <img src="Imagenes/Perfil.jpeg" alt="Foto_de_perfil" class="Foto_de_perfil" id="fotoPerfil" style="cursor: pointer;">
         <h2>Datos Personales</h2>
         <ul class="lista"><!--lista no ordenada-->
             <li><strong>Fecha de nacimiento: 23-09-1996</strong></li>
@@ -27,19 +27,21 @@
         <h2>Resumen profesional</h2>
         <!--Texto en parrafo, se agrega el comando <br> para hacer saltos de linea -->
         <p>Ingeniero industrial con 3 años de experiencia en el area de analista de recaudacion y pagos,<br>administrando cuantas con clientes y proveedores, revisando y validando que la informacion de<br>sus pagos se gestione de manera correcta, en este momento busco seguir desarrollando mis habilidades<br>tanto para la gestion como para el analisis de la informacion.</p>
-        <h2>Estudios</h2>
-        
-        <P>Universidad tecnologica INACAP</P>
-        <ul>
-            <li>Licenciado en ingenieria industrial</li>
-            <li>Inicio: 2017</li>
-            <li>Termino: 2022</li> 
-        </ul>
-        <ul>
-            <li>Estudiante de ingenieria en Ciberseguridad</li>
-            <li>Inicio: 2024</li>
-            <li>Termino: #N/D</li>
-        </ul>
+        <h2 id="titulo-estudios" style="cursor: pointer;">Estudios ⯈</h2>
+        <div id="contenido-estudios" style="display: none;">
+            <p>Universidad Tecnológica INACAP</p>
+            <ul>
+                <li>Licenciado en Ingeniería Industrial</li>
+                <li>Inicio: 2017</li>
+                <li>Término: 2022</li>
+            </ul>
+            <ul>
+                <li>Estudiante de Ingeniería en Ciberseguridad</li>
+                <li>Inicio: 2024</li>
+                <li>Término: #N/D</li>
+            </ul>
+        </div>
+
         <div class="contenedor"><!--Otro comando para ajustar el texto con el style.css-->
             <div>
             <h2>Experiencia Laboral</h2>
@@ -60,7 +62,7 @@
             <button type="submit">Agregar</button>
         </form>
         <div id="listaHabilidades"></div>
-        
+
         <h2>Formulario de contacto</h2>
         <form id="formulario">
             <label for="mensaje">Escriba su correo electronico:</label><br>

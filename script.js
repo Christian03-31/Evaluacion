@@ -116,3 +116,26 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tituloEstudios = document.getElementById("titulo-estudios");
+  const contenidoEstudios = document.getElementById("contenido-estudios");
+
+  tituloEstudios.addEventListener("click", function () {
+    const visible = contenidoEstudios.style.display === "block";
+    contenidoEstudios.style.display = visible ? "none" : "block";
+    tituloEstudios.textContent = visible ? "Estudios ⯈" : "Estudios ⯆";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const foto = document.getElementById("fotoPerfil");
+
+  const imagen1 = "Imagenes/Perfil.jpeg";
+  const imagen2 = "Imagenes/Perfil2.jpeg";
+
+  foto.addEventListener("click", function () {
+    const actual = foto.getAttribute("src");
+    foto.setAttribute("src", actual === imagen1 ? imagen2 : imagen1);
+  });
+});
