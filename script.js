@@ -29,3 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+let indiceColor = 0;
+const colores = ["whitesmoke", "#add8e6", "#2f4f4f"]; // original, celeste, grafito
+
+function cambiarColorFondo() {
+    indiceColor = (indiceColor + 1) % colores.length;
+    document.body.style.backgroundColor = colores[indiceColor];
+}
+document.getElementById("boton-color").addEventListener("click", cambiarColorFondo);
+
