@@ -19,22 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /**
-   * Valida si el correo es válido, vacío o incorrecto.
-   * @param {string} correo
-   * @returns {"vacio" | "invalido" | "valido"}
-   */
+
   function validarCorreo(correo) {
     if (correo === "") return "vacio";
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(correo) ? "valido" : "invalido";
   }
 
-  /**
-   * Muestra el mensaje e ícono correspondiente según el resultado.
-   * @param {"vacio" | "invalido" | "valido"} estado
-   * @param {string} correo
-   */
+
   function mostrarResultado(estado, correo) {
     switch (estado) {
       case "vacio":
