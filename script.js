@@ -1,6 +1,6 @@
 console.log("Script cargado correctamente")
 
-
+//Este scrip es para generar el formulario para ingresar el correo
 document.addEventListener("DOMContentLoaded", function () {
   const formulario = document.getElementById("formulario");
   const campoMensaje = document.getElementById("mensaje");
@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  function validarCorreo(correo) {
+  function validarCorreo(correo) { //Este scrip sirve para validar el formato de correo electronico
     if (correo === "") return "vacio";
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(correo) ? "valido" : "invalido";
   }
 
 
-  function mostrarResultado(estado, correo) {
+  function mostrarResultado(estado, correo) {//Este scrip muestra las alertas y sus respectivas respuestas
     switch (estado) {
       case "vacio":
         alert("Por favor, escribe un correo electrónico. 😠👎");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
+//Este scrip es para generar un boton que permita el cambio de colores de fondo de la pagina
 document.addEventListener("DOMContentLoaded", function () {
     let indiceColor = 0;
     const colores = ["whitesmoke", "#add8e6", "#2f4f4f"];
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
+//Este scrip es para agregar campos a la pagina
 document.addEventListener("DOMContentLoaded", function () {
     const habilidades = [];
     const formHabilidad = document.getElementById("formHabilidad");
@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//Este scrip es para generar una lista desplegable en el campo "Estudios"
 document.addEventListener("DOMContentLoaded", function () {
   const tituloEstudios = document.getElementById("titulo-estudios");
   const contenidoEstudios = document.getElementById("contenido-estudios");
@@ -120,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Este scrip se utiliza para que al hacer click en la imagen de perfil, esta cambie
 document.addEventListener("DOMContentLoaded", function () {
   const foto = document.getElementById("fotoPerfil");
 
@@ -131,3 +133,5 @@ document.addEventListener("DOMContentLoaded", function () {
     foto.setAttribute("src", actual === imagen1 ? imagen2 : imagen1);
   });
 });
+
+
